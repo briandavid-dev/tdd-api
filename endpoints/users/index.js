@@ -3,7 +3,7 @@ const apiJson = "https://jsonplaceholder.typicode.com";
 const handlers = ({ axios }) => ({
   get: async function (req, res) {
     const { data } = await axios.get(`${apiJson}/users`);
-    res.status(200).json(data);
+    res.status(200).send(data);
   },
   post: async function (req, res) {
     const { data } = await axios.post(`${apiJson}/users`);
